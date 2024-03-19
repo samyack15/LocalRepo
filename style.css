@@ -1,0 +1,49 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    background-color: bisque;
+}
+.lightMode{
+    background-color: white;
+    color: black;
+}
+.darkMode{
+    background-color: black;
+    color: aliceblue;
+}
+#hiddenH{
+    visibility: hidden;
+}
+.box{
+    border: 5px solid saddlebrown;
+    text-align: center;
+    
+}
+.mode{
+    background-color: teal;
+    font-size: large;
+    font-family: sans-serif;
+    color: aliceblue;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 25px;
+}
+.h1Class{
+    
+    color: saddlebrown;
+}
+#btn{
+    background-color: sienna;
+    color: beige;
+    font-size: 25px;
+    border-radius: 15px;
+}
+.insertElements{
+    height: 150px;
+    width: 100px;
+    background-color: beige;
+    border: 1px solid saddlebrown;
+    border-radius: 25px;
+    margin: 15px;
+}

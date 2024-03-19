@@ -1,0 +1,425 @@
+You can refer to MDN docs for more info 
+    Main Home Page, Just go and search what you want for eg i want to search for loop in js
+    URl(https://developer.mozilla.org/en-US/)
+
+Refrence URL(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+
+
+
+ChatGPT  Code Explanation Link ()
+
+
+1. Console.log("Hello World !");
+    log is used to print a message. In this case, it will display "Hello World!" in the console of your web browser.
+
+2. Variables:
+    Variables are cointainers for data. 
+    x= null;  
+    null is a special value in JavaScript that means  "no value" or "nothing". It's like an empty box with no content inside of 
+
+    y= undefined;
+    Means a variable has been declared but not given a value yet.
+
+
+    Block Scope: means { } whatever is written inside is call a block 
+    
+1.var:
+
+Use var to declare a variable.
+Variables declared with var can be accessed from anywhere in the function or program.
+Example:
+javascript
+Copy code
+var age = 25;
+function greet() {
+    var name = "John";
+}
+let:
+
+Use let to declare a variable.
+Variables declared with let can only be accessed within the block of code they are declared in.
+Example:
+javascript
+Copy code
+let age = 25;
+if (true) {
+    let name = "John";
+}
+const:
+
+Use const to declare a constant.
+Constants cannot be changed once they are assigned a value.
+Example:
+javascript
+Copy code
+const PI = 3.14;
+In simple terms:
+
+var is like a container that can be accessed from anywhere in the function or program.
+let is like a container that can only be accessed within the block of code it's in.
+const is for values that never change, like a fixed number.
+
+
+BigInt:
+
+BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than the largest number that can be represented with the Number primitive.
+It allows you to work with arbitrarily large integers.
+To create a BigInt, append n to the end of an integer literal or call the BigInt() function.
+Example:
+javascript
+Copy code
+const bigNumber = 1234567890123456789012345678901234567890n;
+const anotherBigInt = BigInt("9007199254740992");
+Symbol:
+
+Symbol is a primitive data type introduced in ECMAScript 2015 (ES6).
+It is used to create unique identifiers for object properties, preventing naming collisions.
+Symbols are immutable and unique. Even if you create two symbols with the same description, they are still different.
+Example:
+javascript
+Copy code
+const symbol1 = Symbol("description");
+const symbol2 = Symbol("description");
+console.log(symbol1 === symbol2); // Output: false
+In simple terms:
+
+BigInt is for representing very large integers beyond the limit of regular numbers.
+Symbol is for creating unique identifiers, especially useful for object properties.
+
+Object:
+
+An object in JavaScript is a collection of key-value pairs, where each key is a string (or symbol) and each value can be any data type (including other objects).
+Objects are used to represent complex data structures and are one of the fundamental data types in JavaScript.
+They are created using curly braces {} or the new Object() constructor.
+Example:
+javascript
+Copy code
+// Using object literal notation
+const Student = {
+    name: "John",
+    age: 20,
+    cgpa : 8.2,
+    isPass: true
+};
+// Using the Object constructor
+const car = new Object();
+car.make = "Toyota";
+car.model = "Corolla";
+car.year = 2022;
+Accessing Properties:
+
+Properties of an object can be accessed using dot notation (object.property) or bracket notation (object["property"]).
+Dot notation is preferred when the property name is known and is a valid identifier.
+Bracket notation is necessary when the property name contains special characters or is stored in a variable.
+Example:
+javascript
+Copy code
+console.log(person.name); // Output: John
+console.log(car["make"]); // Output: Toyota
+
+const propertyName = "age";
+console.log(person[propertyName]); // Output: 30
+Methods:
+
+Properties of an object can also be functions, called methods.
+Methods can perform actions or calculations using the object's data.
+Example:
+javascript
+Copy code
+const person = {
+    name: "John",
+    greet: function() {
+        console.log("Hello, my name is " + this.name);
+    }
+};
+person.greet(); // Output: Hello, my name is John
+In simple terms:
+
+Objects in JavaScript are like containers that hold related information.
+They have properties (variables) and methods (functions).
+Properties can be accessed using dot or bracket notation.
+
+//if i want to change the age later of an object here is how to do it.
+ student["age"] += 1; //or we can use dot notation like this: student.age += 1;
+ console.log(student.age);
+ // or you can do the same by console.log(student["age"]); 
+
+ for...of Loop:
+
+The for...of loop is used to iterate over iterable objects such as arrays, strings, maps, sets, etc.
+It provides an easier and more readable way to iterate over the elements of an iterable compared to traditional for loops or forEach methods.
+Example with an array:
+javascript
+Copy code
+const numbers = [1, 2, 3, 4, 5];
+for (const number of numbers) {
+    console.log(number);
+}
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+for...in Loop:
+
+The for...in loop is used to iterate over the properties of an object.
+It iterates over all enumerable properties, including inherited ones (from the object's prototype chain).
+Example with an object:
+javascript
+Copy code
+const person = {
+    name: "John",
+    age: 30,
+    gender: "male"
+};
+for (const key in person) {
+    console.log(key + ": " + person[key]);
+}
+// Output:
+// name: John
+// age: 30
+// gender: male
+In simple terms:
+
+Use for...of loop to iterate over the elements of an iterable (like arrays).
+Use for...in loop to iterate over the properties of an object.
+
+for...of Loop:
+
+Used to loop through elements of arrays, strings, maps, sets, etc.
+It directly iterates over the values of the collection.
+Best for iterating through values of iterable objects.
+for...in Loop:
+
+Used to loop through properties of objects.
+It iterates over enumerable properties of an object, including inherited ones.
+Best for looping through object properties.
+In very simple terms:
+
+for...of is for looping through values in collections like arrays.
+for...in is for looping through properties in objects.
+Remember, for...of loops over values, while for...in loops over properties. This distinction is important to choose the right loop for your task.
+
+Template literals
+
+ is basically used to print or  display any type of data in a more readable way for eg 
+const pen = {
+    product : "Pen",
+    price : "$10"
+};
+rather than writting 
+console.log("the ", pen.product, " costs $", pen.price); we can write :: 
+let  output = `The ${pen.product} costs ${pen.price}`; 
+this will give the result The Pen costs $10
+console.log(output);
+
+STRING INTERPOLATION:
+String interpolation in template literals is a way to put variables or expressions inside a string. It allows you to combine text with variables or expressions in a more readable and convenient way.
+
+Here's a simple explanation:
+
+Using Variables:
+
+You can insert variables directly into a string using ${} inside backticks (``).
+Example:
+javascript
+Copy code
+const name = "Alice";
+const message = `Hello, ${name}!`;
+// Output: Hello, Alice!
+Using Expressions:
+
+You can also include expressions inside ${}.
+Example:
+javascript
+Copy code
+const a = 5;
+const b = 3;
+const result = `The sum of ${a} and ${b} is ${a + b}.`;
+// Output: The sum of 5 and 3 is 8.
+In simple terms:
+
+String interpolation in template literals allows you to easily include variables or expressions inside a string using ${}.
+It makes your code more readable and concise compared to traditional string concatenation.
+
+
+forEach--=-=-=--=-=-=-=-=-=-=-=-=-
+ForEAch()
+arr.forEach(callBackFunction)
+callBaclFunction is afunction to execute for each element in the array, a callback is a function passed as an argument to another function
+in forEach; arr.forEach((val,index,array)) are used as pararmeter 
+arr.forEach ((val) => { console.log(val);})
+
+let arr = [1,2,3,4,5];
+// forEach will executed for all elements of arr
+arr.forEach((val, i)=>{
+    // here i is the index 
+    console.log(`New Value = ${val+1} index = ${i}`);
+});
+
+Interview Question : What is HIGHER ORDER Functin?
+=> forEach is Higher order functions or methods
+
+
+------------MAP method--------
+Map creats a new array with results of some operations. The value its callback returns are used to form new array
+arr.map(callbackFun(value, index, array))
+===== Main diff btw map and forEach is map returns a new array 
+
+
+----------WINDOW Object----------------------------
+The window object represents an open window in a browser. It is browsers object (not js) & is automatically created by browser
+It is a global object with lots of properties & methods.
+consol.log() here it is window.consol.log()
+it is windows function.
+
+
+=============== DOM ================
+when a webpage is loaded, the browser creates a Document Object Model (DOM) of the page.
+
+In JS : we can access html code  using dom .
+Window=> Document => html 
+
+consol.log => is used to print 
+console.dir => is used to print the object 
+
+to make dynamic changes we use DOM  manipulation techniques.
+
+DOM Manipulation :
+selecting with id 
+document.getElementById("myId")
+
+selecting with class :
+document.getElementByClassName("myClass")
+
+
+selecting with tags :
+document.getElementByTagName("p")
+
+Query Selector
+document.querySelector("muId/myClass/tag");
+Returns first element
+
+document.querySelectorAll("muId/myClass/tag");
+//returns a node list 
+
+
+Properties
+1. tagName : returns tag for element nodes
+2. innerText : returns the text content of the element and all its childern
+3. innerHTML : returns the plain text or HTML contents in the element
+4. textContent : returns textual content even for hidden elements  
+
+Attributes 
+1. getAttribute(attrName): Returns value of attribute if it exists , else null
+
+let div = document.querySelector( "div" ); 
+let attrId = div.getAttribute("id");
+console.log(attrId); 
+
+2. setAttribute(attr, value) : to set attribute value 
+let para = document.querySelector("p");
+console.log(para.setAttribute("class","new class"));
+
+This changes the class name in elements in Inspect but not in actual html 
+
+
+Style
+node.sstyle 
+let txt = document.querySelector("#PQ");
+txt.style.color = "brown";
+txt.style.fontSize = "50px";
+
+INSERT Elements 
+first Create element: 
+let el = document.createElement("div");
+
+node.append(el);
+adds at the end of node (inside)
+
+node.prepend(el); 
+adds at the start of node (inside)
+
+node.before(el);
+Adds el before this Node(outside)
+
+node.after(el);
+Adds el after this Node(outside)
+
+Delete Elements
+node.remove()
+
+Append Child :https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+Remove Child :https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
+
+
+---------------------- Events --------------- 
+The changes in the state of an objest is known as an Event 
+Events are fired to notify of "interesting changes" that may affect code execution.
+
+    * Mouse events (click, double click etc)
+    * Keyboard events (keypress, keyup, keydown)
+    * Form events (submit, etc)
+    * Print event & many more
+
+Event Listeners
+
+
+Events are actions that occur when something happens in the DOM. They can be attached using addEventListener method
+Events are actions that occur when a user interacts with an HTML page. They can be triggered by mouse clicks, keyst
+Events are actions that occur when something happens in a webpage like clicking on an image or button etc..
+
+onclick is one such event which gets triggered when you click on an HTML element.
+
+To add onclick to any element, simply write onclick="functionName" inside the tag.
+
+Example : <button onclick="myFunction()">Click me</button>
+          <script>
+            function myFunction(){
+              alert ("Button Clicked!");
+            }
+          </script>
+          
+There are many other events available like ondblclick for double clicking , onmousemove for moving mouse over an element and
+There are many other events available like ondblclick for double clicking , onmouseover for mouse over and so on. You can find them
+There are many other events available like onmouseover , onkeydown and so on. You can find them here : https://www.w
+There are many other events available like onmouse
+
+Prototype in JS: ----------------------------------------------
+
+A javaScript object is an entity having state and behaviour (properties and methods).
+JS object have a special property called prototype.
+We can set prototype using __proto__
+
+for eg :
+const employee = {
+    calTax(){
+        console.log("Tax rate is 18%");
+    }
+};
+
+const sam = {
+    salary : 50000,
+};
+
+sam.__proto__ = employee; // adding the prototype of employee to sam
+
+here i can access calTax form emp to sam using prototype, if there are many employees i dont have to write  this code for each employee. I just need to use sam.__proto__ = employee;
+
+
+---------Super Keyword in JS-------
+this super keyword is used to call the constructor of its parent class to access the parents properties and methods 
+
+------------- Error Handling ------------
+
+try-catch:
+
+try{
+    ..normal code
+}
+catch(err){
+    ..handling error
+}
+ 

@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+.confetti {
+    position: fixed;
+    background-color: #fbc531; /* Color of the confetti particles */
+    width: 10px; /* Width of each confetti particle */
+    height: 10px; /* Height of each confetti particle */
+    border-radius: 50%; /* Make the particles circular */
+    z-index: 100; /* Ensure the particles appear above other elements */
+    pointer-events: none; /* Prevent the particles from being clickable */
+    animation-name: fall; /* Name of the animation */
+    animation-timing-function: ease-out; /* Timing function of the animation */
+    animation-duration: 3s; /* Duration of the animation */
+    animation-fill-mode: both; /* Apply styles before and after animation */
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100vh) rotateZ(0deg); } /* Initial position and rotation */
+    100% { transform: translateY(100vh) rotateZ(720deg); } /* Final position and rotation */
+}
