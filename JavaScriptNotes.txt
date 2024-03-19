@@ -423,3 +423,12 @@ catch(err){
     ..handling error
 }
  
+
+
+-----------------------------------------Sync in JS==================
+
+Synchronous : means the code runs in a particular sequence of instrction given in the program. 
+Each instrction waits for the previous instruction to complete its execution.
+
+Asynchoronous : Due to synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI.
+Asynchoronous code execution allow to execute next instrctions immediately and doesnt block the flow.
