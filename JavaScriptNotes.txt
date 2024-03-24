@@ -432,3 +432,52 @@ Each instrction waits for the previous instruction to complete its execution.
 
 Asynchoronous : Due to synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI.
 Asynchoronous code execution allow to execute next instrctions immediately and doesnt block the flow.
+
+setTimeout: 
+it  will wait for the time specified in milliseconds then it will call the function passed as argument. 
+
+
+================ Callbacks ===================
+A callback is a function passed as an argument to another function.
+we pass callback without any partenthesis () 
+
+---------------- Callback Hell -----------------
+Nested callback stacked below one another forming a pyramid structure. (Pyramid of Doom)
+
+This sytle of programming becomes difficult to understand & manage. 
+
+its kinda nested Callback
+To solve this we use Promises. 
+
+------------------ Promises ------------------------
+
+YT  Video : https://www.youtube.com/watch?v=d3jXofmQm44&list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW&index=13&t=34m9s
+
+Promises is for "eventual" completion of task. It is an option in JS. It is a soltion to callback Hell.
+
+let promise = new Promise( ( resolve, reject ) => {....} )
+
+resolve and reject are callback provided by JS.
+
+it has 3 states 
+1. Pending : the result is undefined
+2. Resolve : the result is a value (fulfilled)
+3. Reject : the result is an error object
+
+Resolve and Recjet are 2 Handlers inbuilt by JS 
+
+we have 2 functions then and catch 
+promise.then( (res) => {....} )
+here if the promise is resolved then promise.then is executed res is the value passed in resolve.
+
+promise.catch( (err) =>{.....}) 
+here of there is an error or it is rejected we can executre in {..} the error 
+err is the value in  reject.
+
+----------------- Async-Await -------------------
+async function always returns a promise.
+
+
+async function myFun(){...}
+
+await pauses the execution of its surroundings async function until the promise is settled.

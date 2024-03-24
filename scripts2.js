@@ -87,3 +87,97 @@ let btn1 = document.querySelector("#btn");
  * Date : 15/ Feb/ 2024 
  * Events Ends Here
  */
+
+
+/*******************************
+ * Date : 24/ Feb/ 2024 
+ * Callbacks, promises & Async Await
+ * Starts Here
+ */
+
+
+// function hello () {
+//     console.log("Hello!");
+// }
+// setTimeout(hello,3000); // Timeout hello function will execute afer 3 seconds 3sec= 3000 milsec
+
+// We can do the same by
+// setTimeout (() => {
+//     console.log("hello!");
+// }, 4000);
+
+
+
+// What the below code does is we need data 1 after 2 sec and data 2 after data 1 is printed and so on data 3 then data 4
+
+// THis is callback Hell (nested callback)
+
+
+// function getData (dataId, getNextData){
+//     //2s 
+//     setTimeout(() => {
+//         console.log("Data ",dataId);
+//         if(getNextData){
+//             getNextData();
+//         }
+//     }, 2000);
+// }
+// getData( 1, () => {
+//     getData(2, () => {
+//         getData(3, ()=> {
+//             getData(4);
+//         });
+//     });
+// });
+
+
+
+function getData (dataId){
+    return new Promise ( (resolve, reject) => {
+            setTimeout( () => {
+                    console.log("data ",dataId);
+                    resolve("success");                  
+            }, 3000);
+    });
+}
+
+//Promise Chain
+// This is the idea
+//  getData(1).then((res) => {
+//     console.log(res);
+//     getData(2).then ((res) =>{
+//         console.log(res);
+//     });
+// });
+
+// Actual Promise Chaining
+// getData(1).then((res) => {
+//     return getData(2);
+// }).then((res) => {
+//     return getData(3);
+// }).then((res) => {
+//     console.log(res);
+// });
+
+
+//------------------ Async-await -----------
+async function getAllData (){
+    console.log("Getting data1 ...");
+    await getData(1);
+    console.log("Getting data2 ...");
+    await getData(2);
+    console.log("Getting data3 ...");
+    await getData(3);
+}
+getAllData();
+
+
+
+
+
+
+/*******************************
+ * Date : 24/ Feb/ 2024 
+ * Callbacks, promises & Async Await
+ * Ends Here
+ */
