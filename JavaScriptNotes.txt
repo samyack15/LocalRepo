@@ -481,3 +481,33 @@ async function always returns a promise.
 async function myFun(){...}
 
 await pauses the execution of its surroundings async function until the promise is settled.
+
+to use await need to call a function so instead we can use 
+
+IIIFE: Immediately Invoked Function Expression
+
+IIFE is a function that is called Immediately as soon as it is defined.
+
+( function () {...})();
+
+It can be only used once.
+
+
+==================== FETCH API ==========================
+
+https://developer.mozilla.org/en-US/docs/Web/API/fetch
+
+The fetch API provides an interface for fetching (sending/receiving) resources.
+It uses Request and Response objects.
+The fetch() method is used to fetch a resource (data).
+
+let promise = fetch(url,[options])
+
+AJAX is Asynchoronous JS & XML
+JSON is JavaScript Object Notation 
+
+json() method : returns a second promise that resolves with the results of parsing the response body text as JSON (Input is JSON, output is JS object).
+
+
+HW Learn POST in js 
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST
